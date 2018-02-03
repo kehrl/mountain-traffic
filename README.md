@@ -17,8 +17,8 @@ step towards making the app.
 
 ## Scripts
 - `pull_data.py` - Pulls traffic and weather data from the above sources
-- `hourly_traffic_I90.ipynb' - Looks at hourly traffic patterns across Snoqualmie Pass
-- `weather_vs_traffic.ipynb' - Compares temperature to traffic
+- `hourly_traffic_I90.ipynb` - Looks at hourly traffic patterns across Snoqualmie Pass
+- `weather_vs_traffic.ipynb` - Compares temperature to traffic
 
 ## Libraries
 - `weatherlib.py` - Converts GHCN daily weather data to a pandas dataframe 
