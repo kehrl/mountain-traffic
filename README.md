@@ -12,8 +12,8 @@ step towards making the app.
 - Python 3 (numpy, matplotlib, pandas, datetime, scipy, requests, zipfile)
 
 ## Data
-- Traffic data comes from [Washington State Department of Transportation (WSDOT)](http://www.wsdot.wa.gov/data/tools/geoportal/?config=traffic)
-- Weather data comes from [NOAA Land-Based Station Data](https://www.ncdc.noaa.gov/data-access/land-based-station-data) 
+- Traffic data (hourly speed, vehicle count, and vehicle type) from [Washington State Department of Transportation (WSDOT)](http://www.wsdot.wa.gov/data/tools/geoportal/?config=traffic)
+- Weather data from [NOAA Land-Based Station Data](https://www.ncdc.noaa.gov/data-access/land-based-station-data) 
 
 ## Scripts
 - `pull_data.py` - Pulls traffic and weather data from the above sources
