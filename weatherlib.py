@@ -1,3 +1,54 @@
+def read_sun(file):
+    import numpy as np
+    import pandas as pd
+    import datetime as dt
+
+    '''
+    Script to get sunrise and sunset times from the United States Naval Observatory data product 
+    "Sun or Moon Rise/Set Table for One Year," which can be found at 
+    http://aa.usno.navy.mil/data/docs/RS_OneYear.php#forma
+
+    Inputs:
+    file: csv file with the data
+
+    Outputs:
+    data: panda dataframe with columns 'SunsetHour' and 'SunriseHour'
+
+    '''
+
+    # Get file
+    fid = open(file,'r')
+    lines = fid.readlines()
+    fid.close()
+    
+    # Find date range
+    year = int(file[-8:-4])    
+    date1 = dt.datetime(year,1,1)
+    date2 = dt.datetime(year,12,31)
+    days = pd.date_range(date1,date2)
+
+    # Set up dataframe
+    columns = ['Year','Month','Day','datetime','SunriseHour','SunsetHour']
+    data = pd.DataFrame(index=days,columns=columns)    
+    data['Year'] = year
+    data['datetime'] = days
+    data['Month'] = days.month
+    data['Day'] = days.day
+    
+    # Get data, months are given as columns.
+    for i in range(10,len(lines)-7):
+        line = lines[i]
+        day = int(line[3:6])
+        ind1 = 8
+        for j in range(0,12):
+            if line[ind1:ind1+4].isdigit():
+                data.loc[dt.datetime(year,j+1,day) == data['datetime'],'SunriseHour'] = float(line[ind1:ind1+2])+\
+                        float(line[ind1+2:ind1+4])/60
+                data.loc[dt.datetime(year,j+1,day) == data['datetime'],'SunsetHour'] = float(line[ind1+5:ind1+7])+\
+                        float(line[ind1+7:ind1+9])/60
+            ind1 += 11
+
+    return data
 
 def read_dyl(file,elements=['PRCP','SNOW','TMAX','TMIN','TAVG']):
     import pandas as pd
