@@ -14,7 +14,7 @@ vehicle counts for a training dataset, followed by model validation.
 Feedback is appreciated!
 
 ## Dependencies
-- Python3 (numpy, matplotlib, scipy, pandas, requests, zipfile, html2text, datetime, calendar,)
+- Python3 (numpy, matplotlib, scipy, pandas, requests, zipfile, html2text, datetime, calendar)
 
 ## Data
 - Traffic data (hourly speed, vehicle count, and vehicle type) from [Washington State Department of Transportation (WSDOT)](http://www.wsdot.wa.gov/data/tools/geoportal/?config=traffic)
