@@ -34,7 +34,9 @@ def read_sun(file):
     data['datetime'] = days
     data['Month'] = days.month
     data['Day'] = days.day
-    
+    data['SunriseHour'] = float('nan')
+    data['SunsetHour'] = float('nan')
+
     # Get data, months are given as columns.
     for i in range(10,len(lines)-7):
         line = lines[i]
