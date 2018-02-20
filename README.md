@@ -26,7 +26,7 @@ Feedback is appreciated!
 - `pull_data.py` - Pulls traffic and weather data from the above sources
 - `hourly_traffic_*.ipynb` - Looks at hourly traffic patterns
 - `weather_vs_traffic_*.ipynb` - Compares temperature to traffic
-- `monthly_patterns.ipynb - Bins traffic data by month, travel direction, and day of week
+- `monthly_patterns.ipynb` - Bins traffic data by month, travel direction, and day of week
 
 ## Libraries
 - `weatherlib.py` - Converts GHCN daily weather data to a pandas dataframe 
