@@ -1,2 +1,9 @@
 traffic_data
 weather_data
+figures
+*.aux
+*.log
+*.snm
+*.synctex.gz
+*.toc
+*.nav
